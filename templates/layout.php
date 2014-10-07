@@ -5,24 +5,24 @@
     <?php include_http_metas() ?>
     <?php include_metas() ?>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- Le styles -->
+    <!-- Styles -->
     <?php include_stylesheets() ?>
     <script src="/sfTwitterBootstrapPlugin/js/jquery-1.11.2.min.js"></script>
 
-    <!-- Le fav and touch icons -->
+    <!-- Fav and touch icons -->
     <link rel="shortcut icon" href="/favicon.ico" />
   </head>
   <body>
     <?php include_component('sfTwitterBootstrap', 'header'); ?>
 
-    <div class="container-fluid">
-      <?php echo $sf_content ?>
-    </div>
+    <?php echo $sf_content ?>
 
     <?php include_javascripts() ?>
 
