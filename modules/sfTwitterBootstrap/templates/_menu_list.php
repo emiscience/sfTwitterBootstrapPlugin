@@ -18,12 +18,14 @@
               <?php if (sfTwitterBootstrap::hasPermission($subItems, $sf_user)): ?>
                 <li>
                   <a tabindex="-1" href="<?php echo url_for($subItems['url']) ?>" title="<?php echo $subItemsKey; ?>">
-                    <?php if (sfTwitterBootstrap::getProperty('resize_mode') == 'thumbnail'): ?>
-                      <?php echo image_tag('/sfTwitterBootstrapPlugin/images/small/' . $subItems['image'], array('alt' => __($subItemsKey), 'width' => '16', 'height' => '16')); ?>
-                    <?php else: ?>
-                      <?php echo image_tag($subItems['image'], array('alt' => __($subItemsKey), 'width' => '16', 'height' => '16')); ?>
-                    <?php endif; ?>
-                    <span><?php echo __($subItemsKey); ?></span>
+                      <?php if (isset($subItems['fa_icon'])) : ?>
+                          <span class="fa fa-<?php echo $subItems['fa_icon'] ?>"></span>
+                      <?php elseif(isset($subItems['icon'])): ?>
+                          <span class="glyphicon glyphicon-<?php echo $subItems['icon'] ?>"></span>
+                      <?php elseif(isset($subItems['image'])): ?>
+                          <?php echo image_tag($subItems['image'], array('alt' => __($subItemsKey), 'width' => '16', 'height' => '16')); ?>
+                      <?php endif; ?>
+                      <span><?php echo __($subItemsKey); ?></span>
                   </a>
                 </li>
               <?php endif; ?>
