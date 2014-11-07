@@ -1,7 +1,7 @@
 /* ----------------------------------------
     Colors by env
 ----------------------------------------- */
-.dev .navbar-inner {
+.navbar.dev {
   background-color: #ff4020;
   background-image: linear-gradient(top, #FF4120, #FF8120);
   background-image: -o-linear-gradient(top, #FF4120, #FF8120);
@@ -11,18 +11,46 @@
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#FF4120), to(#FF8120));
 }
 
+/*
 .dev.navbar .dropdown-menu li > a:hover, .dev.navbar .dropdown-menu .active > a, .dev.navbar .dropdown-menu .active > a:hover {
   background-color: #FF4120;
 }
+*/
 
-.preprod .navbar-inner{
-  background-color: purple;
-  background-image: linear-gradient(top, #e060ff, purple);
-  background-image: -o-linear-gradient(top, #e060ff, purple);
-  background-image: -moz-linear-gradient(top, #e060ff, purple);
-  background-image: -webkit-linear-gradient(top, #e060ff, purple);
-  background-image: -ms-linear-gradient(top, #e060ff, purple);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e060ff), to(purple));
+.navbar.test {
+    background: #c9b0eb; /* Old browsers */
+    background: -moz-linear-gradient(top, #ebe9f9 0%, #ab78cc 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebe9f9), color-stop(100%,#ab78cc)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ebe9f9 0%,#ab78cc 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ebe9f9 0%,#ab78cc 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ebe9f9 0%,#ab78cc 100%); /* IE10+ */
+    background: linear-gradient(top, #ebe9f9 0%,#ab78cc 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe9f9', endColorstr='#ab78cc',GradientType=0 ); /* IE6-9 */
+}
+
+.navbar.preprod {
+    background: #F07B85; /* Old browsers */
+    background: -moz-linear-gradient(top,  #e8a9a9 0%, #ed5665 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e8a9a9), color-stop(100%,#ed5665)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #e8a9a9 0%,#ed5665 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #e8a9a9 0%,#ed5665 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #e8a9a9 0%,#ed5665 100%); /* IE10+ */
+    background: linear-gradient(top,  #e8a9a9 0%,#ed5665 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8a9a9', endColorstr='#ed5665',GradientType=0 ); /* IE6-9 */
+}
+
+.navbar.prod{
+    background-color: purple;
+    background-image: linear-gradient(top, #222222, #111111);
+    background-image: -o-linear-gradient(top, #222222, #111111);
+    background-image: -moz-linear-gradient(top, #222222, #111111);
+    background-image: -webkit-linear-gradient(top, #222222, #111111);
+    background-image: -ms-linear-gradient(top, #222222, #111111);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
+}
+
+.prod.navbar .nav > li > a/*, .logged*/ {
+    color: white; text-shadow: none;
 }
 
 .preprod.navbar .dropdown-menu li > a:hover,
