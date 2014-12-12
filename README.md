@@ -291,8 +291,8 @@ The best way to show how to use this parameters is with an example:
 We often need to extends form display in the admin generator to display additional information or a plain text field, etc .. To do that, you need to indicate a partial in generator.yml (like `_member_id`) and use this template to have a nice render :
 
 ``` php
-  <div class="control-group sf_admin_form_row sf_admin_text">
-    <label class="control-label" for="member_id">Member</label>
+  <div class="control-group">
+    <label for="member_id">Member</label>
     <div class="controls">
       <?php echo $form['member_id']->render(); ?>
       <div class="input-plain">&raquo; <?php echo $form->getObject()->getMember() ?></div>

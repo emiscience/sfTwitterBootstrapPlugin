@@ -5,13 +5,12 @@
  */
 class sfWidgetFormSchemaFormatterTwitterBootstrap extends sfWidgetFormSchemaFormatter
 {
-    protected
-    $rowFormat              = "%error%%label%\n  <div class=\"controls\">%field%%help%\n%hidden_fields%</div>\n",
-    $errorRowFormat         = "%errors%", // "<div class=\"alert-message error\">\n%errors%</div>\n",
-    $errorListFormatInARow  = "%errors%", // "  <div class=\"alert-message error\">\n%errors% </div>\n",
-    $errorRowFormatInARow   = "<span class=\"help-block error-block\">%error%</span>", // "    <p>%error%</p>\n",
-    $helpFormat             = '<span class="help-block">%help%</span>',
-    $decoratorFormat        = "<ul class=\"man\">\n  %content%</ul>";
+    protected $rowFormat    = "%error%%label%\n  <div class=\"col-sm-9\">%field%%help%\n%hidden_fields%</div>\n";
+    protected $errorRowFormat = "%errors%";
+    protected $errorListFormatInARow = "%errors%";
+    protected $errorRowFormatInARow = "<span class=\"help-block error-block\">%error%</span>";
+    protected $helpFormat = '<span class="help-block">%help%</span>';
+    protected $decoratorFormat = "<ul class=\"man\">\n  %content%</ul>";
 
     protected $validatorSchema;
 
@@ -46,7 +45,8 @@ class sfWidgetFormSchemaFormatterTwitterBootstrap extends sfWidgetFormSchemaForm
             }
         }
 
-        $attributes['class'] = isset($attributes['class']) ? $attributes['class'].' control-label' : 'control-label';
+        $attributes['class'] = isset($attributes['class']) ? $attributes['class'] : '';
+        $attributes['class'].= ' col-sm-3';
 
         return $this->widgetSchema->renderContentTag('label', $labelName, $attributes);
     }
@@ -54,5 +54,28 @@ class sfWidgetFormSchemaFormatterTwitterBootstrap extends sfWidgetFormSchemaForm
     public function setValidatorSchema(sfValidatorSchema $validatorSchema)
     {
         $this->validatorSchema = $validatorSchema;
+    }
+
+    /**
+     * {@inheritdoc}
+     *
+     * @param        $label
+     * @param        $field
+     * @param array  $errors
+     * @param string $help
+     * @param null   $hiddenFields
+     *
+     * @return string
+     */
+    public function formatRow($label, $field, $errors = array(), $help = '', $hiddenFields = null)
+    {
+        return strtr($this->getRowFormat(), array(
+            '%label%'         => "$label",
+            '%field%'         => $field,
+            '%error%'         => $this->formatErrorsForRow($errors),
+            '%error-class%'   => ($this->formatErrorsForRow($errors) == '') ? '' : 'error',
+            '%help%'          => $this->formatHelp($help),
+            '%hidden_fields%' => null === $hiddenFields ? '%hidden_fields%' : $hiddenFields,
+        ));
     }
 }

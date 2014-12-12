@@ -21,9 +21,7 @@ EOF
 foreach ($fields as $fieldName => $config) : ?]
   [?php if (!isset($configs[$config->getName()])): continue; endif; ?]
 <div class="control-group sf_admin_row">
-  <label class="control-label">[?php echo $configs[$fieldName]['label'] ?]</label>
-  <div class="controls">
-    <div class="input-plain">[?php echo $configs[$fieldName]['render'] ?]</div>
-  </div>
+  <label>[?php echo $configs[$fieldName]['label'] ?]</label>
+  <div class="input-plain">[?php echo $configs[$fieldName]['render'] ?]</div>
 </div>
 [?php endforeach; ?]
