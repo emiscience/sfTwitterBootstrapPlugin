@@ -4,7 +4,6 @@
     <?php include_title() ?>
     <?php include_http_metas() ?>
     <?php include_metas() ?>
-    <?php include_javascripts() ?>
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -13,6 +12,7 @@
 
     <!-- Le styles -->
     <?php include_stylesheets() ?>
+    <script src="/sfTwitterBootstrapPlugin/js/jquery-1.11.2.min.js"></script>
 
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="/favicon.ico" />
@@ -23,6 +23,8 @@
     <div class="container-fluid">
       <?php echo $sf_content ?>
     </div>
+
+    <?php include_javascripts() ?>
 
     <script>$(function () { prettyPrint() })</script>
 
