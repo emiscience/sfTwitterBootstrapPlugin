@@ -48,6 +48,7 @@ In ``apps/backend/config/view.yml``
 default:
   stylesheets:
     - /sfTwitterBootstrapPlugin/bootstrap/docs/assets/css/bootstrap.css # compiled css are now in the docs
+    - /sfTwitterBootstrapPlugin/css/font-awesome/css/font-awesome.min.css
     - /sfTwitterBootstrapPlugin/css/style.css
     - /sfTwitterBootstrapPlugin/css/jquery-ui.min.css
     - main.css

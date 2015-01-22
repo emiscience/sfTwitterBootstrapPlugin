@@ -4,3 +4,6 @@
 [submodule "web/js/bootbox"]
 	path = web/js/bootbox
 	url = git://github.com/makeusabrew/bootbox.git
+[submodule "web/css/font-awesome"]
+	path = web/css/font-awesome
+	url = https://github.com/FortAwesome/Font-Awesome.git
