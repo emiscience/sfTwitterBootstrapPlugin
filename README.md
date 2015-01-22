@@ -47,21 +47,15 @@ In ``apps/backend/config/view.yml``
 ```yaml
 default:
   stylesheets:
-    - /sfTwitterBootstrapPlugin/bootstrap/docs/assets/css/bootstrap.css # compiled css are now in the docs
+    - /sfTwitterBootstrapPlugin/bootstrap/dist/css/bootstrap.min.css
     - /sfTwitterBootstrapPlugin/css/font-awesome/css/font-awesome.min.css
     - /sfTwitterBootstrapPlugin/css/style.css
     - /sfTwitterBootstrapPlugin/css/jquery-ui.min.css
     - main.css
 
   javascripts:
-    - "/sfTwitterBootstrapPlugin/bootstrap/js/bootstrap-dropdown.js"
-    - "/sfTwitterBootstrapPlugin/bootstrap/js/bootstrap-tooltip.js"
-    - "/sfTwitterBootstrapPlugin/bootstrap/js/bootstrap-scrollspy.js"
-    - "/sfTwitterBootstrapPlugin/bootstrap/js/bootstrap-modal.js"
-    - "/sfTwitterBootstrapPlugin/bootstrap/js/bootstrap-alert.js"
-    - "/sfTwitterBootstrapPlugin/js/application.js"
-    - "/sfTwitterBootstrapPlugin/js/bootbox/bootbox.min.js"
     - /sfTwitterBootstrapPlugin/js/jquery-ui.min.js
+    - /sfTwitterBootstrapPlugin/bootstrap/dist/js/bootstrap.min.js
 
 
   layout:         %SF_PLUGINS_DIR%/sfTwitterBootstrapPlugin/templates/layout
