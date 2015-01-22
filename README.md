@@ -60,8 +60,6 @@ default:
     - "/sfTwitterBootstrapPlugin/bootstrap/js/bootstrap-alert.js"
     - "/sfTwitterBootstrapPlugin/js/application.js"
     - "/sfTwitterBootstrapPlugin/js/bootbox/bootbox.min.js"
-    - "/sfTwitterBootstrapPlugin/js/google-code-prettify/prettify.js"
-    - "/sfTwitterBootstrapPlugin/js/jquery.tablesorter.min.js"
     - /sfTwitterBootstrapPlugin/js/jquery-ui.min.js
 
 

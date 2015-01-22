@@ -26,7 +26,5 @@
 
     <?php include_javascripts() ?>
 
-    <script>$(function () { prettyPrint() })</script>
-
   </body>
 </html>
