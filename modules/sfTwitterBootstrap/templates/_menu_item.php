@@ -2,7 +2,7 @@
     <?php if (isset($item['fa_icon'])) : ?>
         <span class="fa fa-<?php echo $item['fa_icon'] ?>"></span>
     <?php elseif (isset($item['icon'])): ?>
-        <span class="icon-<?php echo $item['icon'] ?>"></span>
+        <span class="glyphicon glyphicon-<?php echo $item['icon'] ?> icon-<?php echo $item['icon'] ?>"></span>
     <?php elseif (isset($item['image'])): ?>
         <?php echo image_tag($item['image'], array('absolute' => true, 'width' => '16', 'height' => '16')); ?>
     <?php endif; ?>
