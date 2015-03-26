@@ -1,6 +1,19 @@
-This branch use Bootstrap 2.0 for Bootstrap 1.4 switch to 1.0 branch
+
+### This repository will be removed on the 30th of april 2015
+
+*Warning!* Maintenance of this repository will stop on the 30th of april 2015. The repository will then be removed from the account real-chocopanda.
+
+
+
+
+
+
+
+
 
 # sfTwitterBootstrapPlugin
+
+This branch use Bootstrap 2.0 for Bootstrap 1.4 switch to 1.0 branch
 
 This symfony1 plugin provides a dashboard/menu and a theme for the admin generator for your backend. It is based on the [Twitter Bootstrap](http://twitter.github.com/bootstrap/).
 It works with Propel or Doctrine.
