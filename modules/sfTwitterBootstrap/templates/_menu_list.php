@@ -7,7 +7,8 @@
   <?php if (sfTwitterBootstrap::hasPermission($item, $sf_user)): ?>
     <?php if (($items_in_menu && $item['in_menu']) || (!$items_in_menu && !$item['in_menu'])): ?>
       <?php if (isset($item['nav-header'])): ?>
-        <li class="nav-header"><?php echo $item['nav-header']; ?></li>
+        <li class="divider"></li>
+        <li class="disabled"><a href=""><?php echo $item['nav-header']; ?></a></li>
       <?php endif; ?>
 
       <?php if (array_key_exists('sub-items', $item)): ?>
