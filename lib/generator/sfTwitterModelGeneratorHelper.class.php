@@ -60,7 +60,7 @@ abstract class sfTwitterModelGeneratorHelper extends sfModelGeneratorHelper
       $icon = '<i class="icon-remove icon-white"></i> ';
     }
 
-    return link_to($icon . __($params['label'], array(), 'sf_admin'), $this->getUrlForAction('delete'), $object, array('class' => 'btn btn-danger delete mlm', 'onclick' => $confirm));
+    return link_to($icon . __($params['label'], array(), 'sf_admin'), $this->getUrlForAction('delete'), $object, array('class' => 'btn btn-danger delete', 'onclick' => $confirm));
   }
 
   public function linkToEditBtn($object, $params)
@@ -70,7 +70,7 @@ abstract class sfTwitterModelGeneratorHelper extends sfModelGeneratorHelper
       $icon = '<i class="icon-pencil icon-white"></i> ';
     }
 
-    return link_to($icon . __($params['label'], array(), 'sf_admin'), $this->getUrlForAction('edit'), $object, array('class' => 'btn btn-primary mlm'));
+    return link_to($icon . __($params['label'], array(), 'sf_admin'), $this->getUrlForAction('edit'), $object, array('class' => 'btn btn-primary btn3d'));
   }
 
   public function linkToList($params)
@@ -80,7 +80,7 @@ abstract class sfTwitterModelGeneratorHelper extends sfModelGeneratorHelper
       $icon = '<i class="icon-list-alt"></i> ';
     }
 
-    return link_to($icon . __($params['label'], array(), 'sf_admin'), '@'.$this->getUrlForAction('list'), array('class' => 'btn mlm'));
+    return link_to($icon . __($params['label'], array(), 'sf_admin'), '@'.$this->getUrlForAction('list'), array('class' => 'btn'));
   }
 
   public function linkToSave($object, $params)
@@ -90,7 +90,7 @@ abstract class sfTwitterModelGeneratorHelper extends sfModelGeneratorHelper
       $icon = '<i class="icon-ok icon-white"></i> ';
     }
 
-    return '<button class="btn btn-primary mlm" type="submit">'. $icon . __($params['label'], array(), 'sf_admin').'</button>';
+    return '<button class="btn btn-primary btn3d" type="submit">'. $icon . __($params['label'], array(), 'sf_admin').'</button>';
   }
 
   public function linkToSaveAndAdd($object, $params)
@@ -104,7 +104,7 @@ abstract class sfTwitterModelGeneratorHelper extends sfModelGeneratorHelper
       $icon = '<i class="icon-ok icon-white"></i> ';
     }
 
-    return '<button class="btn btn-primary mlm" type="submit" name="_save_and_add">'. $icon . __($params['label'], array(), 'sf_admin').'</button>';
+    return '<button class="btn btn-primary btn3d" type="submit" name="_save_and_add">'. $icon . __($params['label'], array(), 'sf_admin').'</button>';
   }
 
   protected function generateDeleteConfirm($confirm)
