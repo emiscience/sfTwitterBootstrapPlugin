@@ -10,7 +10,7 @@
   <div class="sf_admin_with_right_column">
 <?php endif; ?>
 
-  <h2 class="mbl">[?php echo <?php echo $this->getI18NString('list.title') ?> ?]</h2>
+  <h2>[?php echo <?php echo $this->getI18NString('list.title') ?> ?]</h2>
 
   [?php include_partial('<?php echo $this->getModuleName() ?>/flashes') ?]
 

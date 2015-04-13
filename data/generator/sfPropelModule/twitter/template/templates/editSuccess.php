@@ -3,7 +3,7 @@
 
 <div>
 
-  <h2 class="mbl">
+  <h2>
     [?php echo <?php echo $this->getI18NString('edit.title') ?> ?]
 
     [?php if(true == sfTwitterBootstrap::getProperty('top_link_to_fieldset')): ?]
