@@ -1,7 +1,7 @@
 [?php use_helper('I18N', 'Date') ?]
 [?php include_partial('<?php echo $this->getModuleName() ?>/assets') ?]
 
-<div id="sf_admin_container">
+<div>
 
   <h2 class="mbl">
     [?php echo <?php echo $this->getI18NString('show.title') ?> ?]
