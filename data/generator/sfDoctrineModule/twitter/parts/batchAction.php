@@ -51,6 +51,6 @@
       $record->delete();
     }
 
-    $this->getUser()->setFlash('notice', 'The selected items have been deleted successfully.');
+    $this->getUser()->setFlash('success', 'The selected items have been deleted successfully.');
     $this->redirect('@<?php echo $this->getUrlForAction('list') ?>');
   }

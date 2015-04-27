@@ -24,11 +24,11 @@
       $this->dispatcher->notify(new sfEvent($this, 'admin.save_object', array('object' => $<?php echo $this->getSingularName() ?>)));
 
       if ($request->hasParameter('_save_and_add')) {
-        $this->getUser()->setFlash('notice', $notice.' You can add another one below.');
+        $this->getUser()->setFlash('success', $notice.' You can add another one below.');
 
         $this->redirect('@<?php echo $this->getUrlForAction('new') ?>');
       } else {
-        $this->getUser()->setFlash('notice', $notice);
+        $this->getUser()->setFlash('success', $notice);
 
         $this->redirect(array('sf_route' => '<?php echo $this->getUrlForAction('edit') ?>', 'sf_subject' => $<?php echo $this->getSingularName() ?>));
       }
