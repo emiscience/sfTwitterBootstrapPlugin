@@ -51,7 +51,7 @@
     }
 
     if ($count >= count($ids)) {
-      $this->getUser()->setFlash('notice', 'The selected items have been deleted successfully.');
+      $this->getUser()->setFlash('success', 'The selected items have been deleted successfully.');
     } else {
       $this->getUser()->setFlash('error', 'A problem occurs when deleting the selected items.');
     }
